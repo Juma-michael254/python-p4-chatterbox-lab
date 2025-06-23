@@ -18,5 +18,5 @@ class Message(db.Model, SerializerMixin):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
-    # Limit fields shown in serialization (optional but useful)
-    serialize_rules = ('-updated_at',)  # hides 'updated_at' from JSON if you want
+    
+    serialize_rules = ('-updated_at',) 
